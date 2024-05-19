@@ -1,0 +1,35 @@
+{
+    "name": "sco-rugby/core",
+    "description": "SCO Rugby core component",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Antoine BOUET",
+            "email": "antoine@famille-bouet.fr"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-ctype": "*",
+        "symfony/framework-bundle": "^6.4",
+        "symfony/orm-pack": "^2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/debug-bundle": "6.4.*",
+        "symfony/maker-bundle": "^1.48",
+        "symfony/phpunit-bridge": "^6.4",
+        "symfony/stopwatch": "6.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ScoRugby\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ScoRugby\\Core\\Tests\\": "tests/"
+        }
+    }
+}
