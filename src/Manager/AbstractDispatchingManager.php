@@ -11,7 +11,7 @@ use ScoRugby\Core\Event\ExceptionEvent;
  *
  * @author abouet
  */
-abstract class AbstractDispatchingManager extends AbstractRepositoryResourceManager {
+abstract class AbstractDispatchingManager extends AbstractRepositoryManager {
 
     public function create($properties): ManagedResourceInterface {
         $name = strTolower(sprintf('%s.create', $this->getResourceName()));
