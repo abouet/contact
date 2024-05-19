@@ -21,7 +21,7 @@ final class TraitementManager extends AbstractManager {
         return $this->repository->getClassName();
     }
 
-    public function setResource(ManagedResourceInterface $resource) {
+    public function setResource(ManagedResourceInterface $resource): self {
         $this->resource = $resource;
     }
 
