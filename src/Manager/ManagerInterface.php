@@ -3,6 +3,7 @@
 namespace ScoRugby\Core\Manager;
 
 use ScoRugby\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 
 interface ManagerInterface {
 
