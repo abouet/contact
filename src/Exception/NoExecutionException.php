@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Exception;
+namespace ScoRugby\Core\Exception;
 
 class NoExecutionException extends \Exception {
     
