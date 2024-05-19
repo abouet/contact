@@ -9,14 +9,16 @@ use ScoRugby\Core\Exception\ResourceActionException;
 use ScoRugby\Core\Model\ManagedResourceInterface;
 use Psr\Log\LoggerInterface;
 
-final class TraitementManager implements ManagerInterface {
-
-    use ManagerTrait;
+final class TraitementManager extends AbstractManager {
 
     protected $resource;
 
     public function __construct(private TraitementRepository $repository, private LoggerInterface $logger) {
         return;
+    }
+
+    public function getClassName(): string {
+        return $this->repository->getClassName();
     }
 
     public function setResource(ManagedResourceInterface $resource) {
