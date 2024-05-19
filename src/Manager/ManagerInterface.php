@@ -1,4 +1,3 @@
-
 <?php
 
 namespace ScoRugby\Core\Manager;
