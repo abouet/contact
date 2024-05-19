@@ -7,6 +7,7 @@ use ScoRugby\Core\Model\TraitementInterface;
 use ScoRugby\Core\Repository\TraitementRepository;
 use ScoRugby\Core\Exception\ResourceActionException;
 use ScoRugby\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Exception\ResourceNotFoundException;
 use Psr\Log\LoggerInterface;
 
 final class TraitementManager extends AbstractManager {
@@ -32,8 +33,13 @@ final class TraitementManager extends AbstractManager {
     /**
      * @inheritDoc
      */
-    public function get($id): ?ManagedResourceInterface {
-        return $this->repository->find($id);
+    public function get($id): ManagedResourceInterface {
+        $trt = $this->repository->find($id);
+        if (!$trt) {
+            throw new ResourceNotFoundException(sprintf("Traitement '%s' not found", $id));
+        }
+        $this->setResource($trt);
+        return $trt;
     }
 
     /**
@@ -53,7 +59,7 @@ final class TraitementManager extends AbstractManager {
     /**
      * @inheritDoc
      */
-    public function find() {
+    public function find(): array {
         return $this->repository->findAll();
     }
 
