@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Entity;
+namespace ScoRugby\Core\Entity;
 
-use App\Repository\TraitementRepository;
-use App\Model\Traitement as BaseTraitement;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use App\Model\ManagedResourceInterface;
-use App\Entity\EntityInterface;
+use ScoRugby\Core\Repository\TraitementRepository;
+use ScoRugby\Core\Model\Traitement as BaseTraitement;
+use ScoRugby\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: TraitementRepository::class)]
-//#[ORM\Table(schema: "club")]
 class Traitement extends BaseTraitement implements EntityInterface, \Stringable, ManagedResourceInterface {
 
     public const SUCCESS = 0;
