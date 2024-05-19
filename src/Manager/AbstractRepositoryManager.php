@@ -16,10 +16,6 @@ use ScoRugby\Core\Model\ManagedResourceInterface;
 
 abstract class AbstractRepositoryManager extends AbstractManager {
 
-    use ManagerTrait;
-
-    protected $resource;
-
     public function __construct(protected ServiceEntityRepository $repository, protected ?EventDispatcherInterface $dispatcher = null, protected ?ValidatorInterface $validator = null, protected ?FormFactoryInterface $formFactory = null) {
         return;
     }
