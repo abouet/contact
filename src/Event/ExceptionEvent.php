@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Event;
+namespace App\Core\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

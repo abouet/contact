@@ -1,11 +1,11 @@
 <?php
 
-namespace ScoRugby\Core\Entity;
+namespace App\Core\Entity;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Model\TaxonomieInterface;
-use ScoRugby\Core\Entity\EntityInterface;
+use App\Core\Model\TaxonomieInterface;
+use App\Core\Entity\EntityInterface;
 
 #[ORM\MappedSuperclass]
 abstract class AbstractTaxonomie implements EntityInterface, TaxonomieInterface, SluggifyInterface, \Stringable {

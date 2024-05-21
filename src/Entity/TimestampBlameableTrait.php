@@ -1,10 +1,10 @@
 <?php
 
-namespace ScoRugby\Core\Entity;
+namespace App\Core\Entity;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-//use ScoRugby\Core\Entity\Security\User;
+//use App\Core\Entity\Security\User;
 
 trait TimestampBlameableTrait {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Entity;
+namespace App\Core\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\String\Slugger\AsciiSlugger;

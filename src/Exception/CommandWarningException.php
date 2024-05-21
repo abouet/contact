@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Exception;
+namespace App\Core\Exception;
 
 class CommandWarningException extends \Exception {
     

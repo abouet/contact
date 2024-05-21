@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Entity;
+namespace App\Core\Entity;
 
 /**
  *

@@ -1,8 +1,8 @@
 <?php
 
-namespace ScoRugby\Core\Entity;
+namespace App\Core\Entity;
 
-//use ScoRugby\Core\Entity\Security\User;
+//use App\Core\Entity\Security\User;
 
 interface TimestampBlameableInterface {
 

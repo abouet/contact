@@ -1,10 +1,10 @@
 <?php
 
-namespace ScoRugby\Core\Service;
+namespace App\Core\Service;
 
-use ScoRugby\Core\Model\Traitement;
-use ScoRugby\Core\Model\TraitementInterface;
-use ScoRugby\Core\Event\TraitementEvent;
+use App\Core\Model\Traitement;
+use App\Core\Model\TraitementInterface;
+use App\Core\Event\TraitementEvent;
 
 trait TraitementTrait {
 

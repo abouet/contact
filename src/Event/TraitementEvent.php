@@ -1,9 +1,9 @@
 <?php
 
-namespace ScoRugby\Core\Event;
+namespace App\Core\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use ScoRugby\Core\Model\TraitementInterface;
+use App\Core\Model\TraitementInterface;
 
 class TraitementEvent extends Event {
 

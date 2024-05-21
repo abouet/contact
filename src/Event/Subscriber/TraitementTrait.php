@@ -1,9 +1,9 @@
 <?php
 
-namespace ScoRugby\Core\Event\Subscriber;
+namespace App\Core\Event\Subscriber;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use ScoRugby\Core\Manager\TraitementManager;
+use App\Core\Manager\TraitementManager;
 
 /**
  *

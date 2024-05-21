@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Exception\Resource;
+namespace App\Core\Exception\Resource;
 
 class InvalidResourceException extends \Exception {
     

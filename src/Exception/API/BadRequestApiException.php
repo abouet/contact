@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Exception\API;
+namespace App\Core\Exception\API;
 
 /**
  * Description of BadRequestApiException

@@ -1,9 +1,9 @@
 <?php
 
-namespace ScoRugby\Core\Event\Subscriber;
+namespace App\Core\Event\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use ScoRugby\Core\Entity\TimestampBlameableInterface;
+use App\Core\Entity\TimestampBlameableInterface;
 use Symfony\Bundle\SecurityBundle\Security;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Event\PrePersistEventArgs;

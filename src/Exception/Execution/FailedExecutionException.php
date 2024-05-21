@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Core\Exception\Execution;
+namespace App\Core\Exception\Execution;
 
 class FailedExecutionException extends \Exception {
     
