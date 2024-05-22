@@ -1,0 +1,78 @@
+{
+    "name": "sco-rugby/contact",
+    "description": "Composant Contact du SCO Rugby",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Antoine BOUET",
+            "email": "antoine@famille-bouet.fr"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "gitlab",
+            "url": "git@gitlab.com:sco-rugby/core.git"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "sco-rugby/core": "^1.0",
+        "symfony/framework-bundle": "7.0.*",
+        "symfony/orm-pack": "^2.4",
+        "symfony/serializer": "v7.0.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Contact\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Contact\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "7.0.*",
+            "docker": true
+        }
+    }
+}
