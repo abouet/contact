@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\Contact\Repository;
+namespace ScoRugby\ContactBundle\Repository;
 
 use App\Entity\Contact\ContactExterne;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;

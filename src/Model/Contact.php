@@ -1,7 +1,7 @@
 
 <?php
 
-namespace ScoRugby\Contact\Model;
+namespace ScoRugby\ContactBundle\Model;
 
 class Contact implements ContactInterface {
 

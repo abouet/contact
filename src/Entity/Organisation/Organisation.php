@@ -1,18 +1,17 @@
 <?php
 
-namespace ScoRugby\Contact\Entity\Organisation;
+namespace ScoRugby\ContactBundle\Entity\Organisation;
 
-use ScoRugby\Contact\Model\Adresse;
-use ScoRugby\Contact\Entity\Contact;
+use ScoRugby\ContactBundle\Model\Adresse;
+use ScoRugby\ContactBundle\Entity\Contact;
 use App\Repository\Organisation\OrganisationRepository;
-use App\Collection\CollectionOrganisation;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Model\ManagedResourceInterface;
-use ScoRugby\Core\Entity\TimestampBlameableInterface;
-use ScoRugby\Core\Entity\TimestampBlameableTrait;
-use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\CoreBundle\Model\ManagedResourceInterface;
+use ScoRugby\CoreBundle\Entity\TimestampBlameableInterface;
+use ScoRugby\CoreBundle\Entity\TimestampBlameableTrait;
+use ScoRugby\CoreBundle\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: OrganisationRepository::class)]
 //#[ORM\Table(schema: "contact")]

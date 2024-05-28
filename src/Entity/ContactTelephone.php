@@ -1,12 +1,12 @@
 <?php
 
-namespace ScoRugby\Contact\Entity;
+namespace ScoRugby\ContactBundle\Entity;
 
-use ScoRugby\Contact\Repository\ContactTelephoneRepository;
+use ScoRugby\ContactBundle\Repository\ContactTelephoneRepository;
 use Doctrine\ORM\Mapping as ORM;
 use App\Exception\InvalidParameterException;
 use Symfony\Component\Intl\Countries;
-USE ScoRugby\Core\Entity\EntityInterface;
+USE ScoRugby\CoreBundle\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: ContactTelephoneRepository::class)]
 //#[ORM\Table(schema: "club")]

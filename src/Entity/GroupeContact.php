@@ -1,11 +1,11 @@
 <?php
 
-namespace ScoRugby\Contact\Entity;
+namespace ScoRugby\ContactBundle\Entity;
 
-use ScoRugby\Contact\Repository\GroupeContactRepository;
+use ScoRugby\ContactBundle\Repository\GroupeContactRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\CoreBundle\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: GroupeContactRepository::class)]
 //#[ORM\Table(schema: "club")]

@@ -3,7 +3,7 @@
 namespace App\Model\Adresse;
 
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Exception\InvalidParameterException;
+use ScoRugby\CoreBundle\Exception\InvalidParameterException;
 use Symfony\Component\Intl\Countries;
 
 #[ORM\Embeddable]

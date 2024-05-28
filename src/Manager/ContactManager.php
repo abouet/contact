@@ -1,14 +1,14 @@
 <?php
 
-namespace ScoRugby\Contact\Manager;
+namespace ScoRugby\ContactBundle\Manager;
 
-use ScoRugby\Core\Manager\AbstractDispatchingManager;
+use ScoRugby\CoreBundle\Manager\AbstractDispatchingManager;
 //!!use App\Manager\Adresse\AdresseManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use ScoRugby\Contact\Repository\ContactRepository;
+use ScoRugby\ContactBundle\Repository\ContactRepository;
 //!!use App\Entity\Adresse\Adresse;
 use Symfony\Component\String\UnicodeString;
 

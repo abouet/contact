@@ -1,14 +1,14 @@
 <?php
 
-namespace ScoRugby\Contact\Entity;
+namespace ScoRugby\ContactBundle\Entity;
 
 use App\Entity\Evenement\Calendrier;
 //!!use App\Entity\Club\Fonction;
-//!!use ScoRugby\Contact\Repository\GroupeRepository;
+//!!use ScoRugby\ContactBundle\Repository\GroupeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\CoreBundle\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: GroupeRepository::class)]
 //#[ORM\Table(schema: "club")]

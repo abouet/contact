@@ -1,10 +1,10 @@
 <?php
 
-namespace ScoRugby\Contact\Entity;
+namespace ScoRugby\ContactBundle\Entity;
 
 use App\Repository\Adresse\CodePostalRepository;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\CoreBundle\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: CodePostalRepository::class, readOnly: true)]
 //[ORM\Table(schema: "club")]
