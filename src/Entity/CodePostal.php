@@ -2,7 +2,7 @@
 
 namespace ScoRugby\ContactBundle\Entity;
 
-use App\Repository\Adresse\CodePostalRepository;
+use ScoRugby\ContactBundle\Repository\CodePostalRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ScoRugby\CoreBundle\Entity\EntityInterface;
 

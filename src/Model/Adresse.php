@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Adresse;
+namespace ScoRugby\ContactBundle\Model\Adresse;
 
 use Doctrine\ORM\Mapping as ORM;
 use ScoRugby\CoreBundle\Exception\InvalidParameterException;

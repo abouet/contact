@@ -2,7 +2,7 @@
 
 namespace ScoRugby\ContactBundle\Repository;
 
-use App\Entity\Contact\ContactEmail;
+use ScoRugby\ContactBundle\Entity\Contact\ContactEmail;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

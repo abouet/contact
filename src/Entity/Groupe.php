@@ -2,9 +2,6 @@
 
 namespace ScoRugby\ContactBundle\Entity;
 
-use App\Entity\Evenement\Calendrier;
-//!!use App\Entity\Club\Fonction;
-//!!use ScoRugby\ContactBundle\Repository\GroupeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -27,12 +24,6 @@ class Groupe implements EntityInterface {
 
     #[ORM\OneToMany(mappedBy: 'groupe', targetEntity: GroupeContact::class, orphanRemoval: true)]
     private Collection $contacts;
-
-    #[ORM\ManyToOne(inversedBy: 'groupes')]
-    private ?Fonction $fonction = null;
-
-    #[ORM\ManyToOne(inversedBy: 'groupes')]
-    private ?Calendrier $calendrier = null;
 
     public function __construct() {
         $this->contacts = new ArrayCollection();
@@ -89,25 +80,21 @@ class Groupe implements EntityInterface {
         return $this;
     }
 
-    public function getFonction(): ?Fonction
-    {
+    public function getFonction(): ?Fonction {
         return $this->fonction;
     }
 
-    public function setFonction(?Fonction $fonction): static
-    {
+    public function setFonction(?Fonction $fonction): static {
         $this->fonction = $fonction;
 
         return $this;
     }
 
-    public function getCalendrier(): ?Calendrier
-    {
+    public function getCalendrier(): ?Calendrier {
         return $this->calendrier;
     }
 
-    public function setCalendrier(?Calendrier $calendrier): static
-    {
+    public function setCalendrier(?Calendrier $calendrier): static {
         $this->calendrier = $calendrier;
 
         return $this;

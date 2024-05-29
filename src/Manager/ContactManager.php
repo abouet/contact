@@ -3,13 +3,13 @@
 namespace ScoRugby\ContactBundle\Manager;
 
 use ScoRugby\CoreBundle\Manager\AbstractDispatchingManager;
-//!!use App\Manager\Adresse\AdresseManager;
+//!!use App\Manager\AdresseManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use ScoRugby\ContactBundle\Repository\ContactRepository;
-//!!use App\Entity\Adresse\Adresse;
+//!!use App\Entity\Adresse;
 use Symfony\Component\String\UnicodeString;
 
 final class ContactManager extends AbstractDispatchingManager {

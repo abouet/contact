@@ -4,7 +4,7 @@ namespace ScoRugby\ContactBundle\Entity;
 
 use ScoRugby\ContactBundle\Repository\ContactTelephoneRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\Exception\InvalidParameterException;
+use ScoRugby\CoreBundle\Exception\InvalidParameterException;
 use Symfony\Component\Intl\Countries;
 USE ScoRugby\CoreBundle\Entity\EntityInterface;
 

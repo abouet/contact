@@ -3,8 +3,8 @@
 namespace ScoRugby\ContactBundle\Entity;
 
 use ScoRugby\ContactBundle\Model as BaseContact;
-use App\Entity\Adresse\Commune;
-use App\Entity\Organisation\Organisation;
+use ScoRugby\ContactBundle\Entity\Commune;
+use ScoRugby\ContactBundle\Entity\Organisation\Organisation;
 use ScoRugby\ContactBundle\Repository\ContactRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;

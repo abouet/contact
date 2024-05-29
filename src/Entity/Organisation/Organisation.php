@@ -4,7 +4,7 @@ namespace ScoRugby\ContactBundle\Entity\Organisation;
 
 use ScoRugby\ContactBundle\Model\Adresse;
 use ScoRugby\ContactBundle\Entity\Contact;
-use App\Repository\Organisation\OrganisationRepository;
+use ScoRugby\ContactBundle\Repository\Organisation\OrganisationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

@@ -13,8 +13,10 @@ use ScoRugby\ContactBundle\Model\AdresseInterface;
  */
 class AdresseMormalizer implements NormalizerInterface {
 
-    public function __construct(private readonly CommuneNormalizer $communeNormalizer) {
-        return;
+    private readonly CommuneNormalizer $communeNormalizer;
+
+    public function __construct() {
+        $this->communeNormalizer = new CommuneNormalizer();
     }
 
     public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null {
@@ -40,7 +42,7 @@ class AdresseMormalizer implements NormalizerInterface {
         $adresse->setComplement($elmt['complement']);
         //
         if (!empty($elmt['ville'])) {
-            $ville = $this->communeNormalizer->normalize($elmt['ville']);
+            $ville = $this->communeNormalizer->normalize($elmt['ville'], 'string', ['canonize' => true]);
             $adresse->setVille($ville);
         }
         if (!empty($adresse->getCodePostal())) {
@@ -60,5 +62,4 @@ class AdresseMormalizer implements NormalizerInterface {
             AdresseInterface::class => true
         ];
     }
-
 }
