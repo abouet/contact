@@ -14,6 +14,7 @@ use ScoRugby\Core\Entity\EntityInterface;
 use ScoRugby\Core\Model\ManagedResourceInterface;
 use ScoRugby\Core\Entity\TimestampBlameableInterface;
 use ScoRugby\Core\Entity\TimestampBlameableTrait;
+use ScoRugby\Contact\Model\Adresse;
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 //[ORM\Table(schema: "contact")]

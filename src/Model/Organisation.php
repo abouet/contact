@@ -2,8 +2,6 @@
 
 namespace ScoRugby\Contact\Model;
 
-use ScoRugby\Contact\Model\Adresse;
-
 class Organisation {
 
     private ?int $id = null;

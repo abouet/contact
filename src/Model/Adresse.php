@@ -1,13 +1,13 @@
 <?php
 
-namespace ScoRugby\Contact\Model\Adresse;
+namespace ScoRugby\Contact\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use ScoRugby\Core\Exception\InvalidParameterException;
 use Symfony\Component\Intl\Countries;
 
 #[ORM\Embeddable]
-class Adresse {
+class Adresse implements AdresseInterface {
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $adresse = null;
