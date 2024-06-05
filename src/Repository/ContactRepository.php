@@ -1,8 +1,8 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Repository;
+namespace ScoRugby\Contact\Repository;
 
-use ScoRugby\ContactBundle\Entity\Contact;
+use ScoRugby\Contact\Entity\Contact;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 //!!use App\Repository\ImportableRepositoryInferface;
@@ -44,7 +44,7 @@ class ContactRepository extends ServiceEntityRepository implements ImportableRep
     public function findAllForSearch(): array {
         return $this->getEntityManager()
                         ->createQuery(
-                                'SELECT c, UPPER(c.nom) canonized_nom, UPPER(c.prenom) canonized_prenom FROM ScoRugby\ContactBundle\Entity\Contact c order by c.nom ASC, c.prenom ASC'
+                                'SELECT c, UPPER(c.nom) canonized_nom, UPPER(c.prenom) canonized_prenom FROM ScoRugby\Contact\Entity\Contact c order by c.nom ASC, c.prenom ASC'
                         )
                         ->getScalarResult();
     }
@@ -61,7 +61,7 @@ class ContactRepository extends ServiceEntityRepository implements ImportableRep
 
     protected function findContactByEmail(string $email): ?Contact {
         return $this->getEntityManager()
-                        ->createQuery("SELECT c FROM ScoRugby\ContactBundle\Entity\ContactEmail e JOIN e.contact c WHERE e.email = :email")
+                        ->createQuery("SELECT c FROM ScoRugby\Contact\Entity\ContactEmail e JOIN e.contact c WHERE e.email = :email")
                         ->setParameter('email', $email)
                         ->getQuery()
                         ->getSingleResult();
@@ -69,7 +69,7 @@ class ContactRepository extends ServiceEntityRepository implements ImportableRep
 
     protected function findContactByPhone(string $phone): ?Contact {
         return $this->getEntityManager()
-                        ->createQuery("SELECT c FROM ScoRugby\ContactBundle\Entity\ContactTelephone p JOIN p.contact c WHERE p.numero = :phone")
+                        ->createQuery("SELECT c FROM ScoRugby\Contact\Entity\ContactTelephone p JOIN p.contact c WHERE p.numero = :phone")
                         ->setParameter('phone', $phone)
                         ->getQuery()
                         ->getSingleResult();

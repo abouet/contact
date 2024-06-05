@@ -1,9 +1,9 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Repository\Adresse;
+namespace ScoRugby\Contact\Repository\Adresse;
 
-use ScoRugby\ContactBundle\Entity\Commune;
-use ScoRugby\ContactBundle\Model\Adresse;
+use ScoRugby\Contact\Entity\Commune;
+use ScoRugby\Contact\Model\Adresse;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

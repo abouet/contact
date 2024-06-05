@@ -1,8 +1,8 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Repository;
+namespace ScoRugby\Contact\Repository;
 
-use ScoRugby\ContactBundle\Entity\Contact\ContactEmail;
+use ScoRugby\Contact\Entity\Contact\ContactEmail;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

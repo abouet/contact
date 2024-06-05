@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Adresse;
+namespace ScoRugby\Contact\Adresse;
 
 /**
  *

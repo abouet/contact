@@ -1,9 +1,9 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Model\Adresse;
+namespace ScoRugby\Contact\Model\Adresse;
 
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\CoreBundle\Exception\InvalidParameterException;
+use ScoRugby\Core\Exception\InvalidParameterException;
 use Symfony\Component\Intl\Countries;
 
 #[ORM\Embeddable]

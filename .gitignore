@@ -8,5 +8,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+/bin/
 /nbproject/
 /.vscode/

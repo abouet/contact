@@ -1,21 +1,21 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Entity\Organisation;
+namespace ScoRugby\Contact\Entity;
 
-use ScoRugby\ContactBundle\Model\Adresse;
-use ScoRugby\ContactBundle\Entity\Contact;
-use ScoRugby\ContactBundle\Repository\Organisation\OrganisationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\CoreBundle\Model\ManagedResourceInterface;
-use ScoRugby\CoreBundle\Entity\TimestampBlameableInterface;
-use ScoRugby\CoreBundle\Entity\TimestampBlameableTrait;
-use ScoRugby\CoreBundle\Entity\EntityInterface;
+use ScoRugby\Contact\Model\Adresse;
+use ScoRugby\Contact\Entity\Contact;
+use ScoRugby\Contact\Repository\Organisation\OrganisationRepository;
+use ScoRugby\Core\Entity\TimestampBlameableInterface;
+use ScoRugby\Core\Entity\TimestampBlameableTrait;
+use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\Contact\Model\Organisation as BaseOrganisation;
 
 #[ORM\Entity(repositoryClass: OrganisationRepository::class)]
 //#[ORM\Table(schema: "contact")]
-class Organisation implements EntityInterface, ManagedResourceInterface, TimestampBlameableInterface {
+class Organisation extends BaseOrganisation implements EntityInterface, TimestampBlameableInterface {
 
     use TimestampBlameableTrait;
 
@@ -39,36 +39,8 @@ class Organisation implements EntityInterface, ManagedResourceInterface, Timesta
     private Collection $contacts;
 
     public function __construct() {
-        $this->adresse = new Adresse();
+        parent::__construct();
         $this->contacts = new ArrayCollection();
-    }
-
-    public function getId(): ?int {
-        return $this->id;
-    }
-
-    public function getAdresse(): Adresse {
-        return $this->adresse;
-    }
-
-    public function getNom(): ?string {
-        return $this->nom;
-    }
-
-    public function setNom(string $nom): self {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getEtat(): ?string {
-        return $this->etat;
-    }
-
-    public function setEtat(string $etat): self {
-        $this->etat = $etat;
-
-        return $this;
     }
 
     /**

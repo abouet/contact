@@ -1,25 +1,24 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Entity;
+namespace ScoRugby\Contact\Entity;
 
-use ScoRugby\ContactBundle\Model as BaseContact;
-use ScoRugby\ContactBundle\Entity\Commune;
-use ScoRugby\ContactBundle\Entity\Organisation\Organisation;
-use ScoRugby\ContactBundle\Repository\ContactRepository;
+use ScoRugby\Contact\Model as BaseContact;
+use ScoRugby\Contact\Entity\Commune;
+use ScoRugby\Contact\Entity\Organisation\Organisation;
+use ScoRugby\Contact\Repository\ContactRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\CoreBundle\Entity\EntityInterface;
-use ScoRugby\CoreBundle\Model\ManagedResourceInterface;
-use ScoRugby\CoreBundle\Entity\TimestampBlameableInterface;
-use ScoRugby\CoreBundle\Entity\TimestampBlameableTrait;
+use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Entity\TimestampBlameableInterface;
+use ScoRugby\Core\Entity\TimestampBlameableTrait;
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 //[ORM\Table(schema: "contact")]
-#[ORM\UniqueConstraint(name: "unq_contact_external_id", columns: ["external_id"])]
 #[ORM\HasLifecycleCallbacks]
-class Contact extends BaseContact implements EntityInterface, ManagedResourceInterface, TimestampBlameableInterface {
+class Contact extends BaseContact implements EntityInterface, TimestampBlameableInterface, ManagedResourceInterface {
 
     use TimestampBlameableTrait;
 

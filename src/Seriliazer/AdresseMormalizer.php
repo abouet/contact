@@ -1,10 +1,10 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Seriliazer;
+namespace ScoRugby\Contact\Seriliazer;
 
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\String\UnicodeString;
-use ScoRugby\ContactBundle\Model\AdresseInterface;
+use ScoRugby\Contact\Model\AdresseInterface;
 
 /**
  * Description of AdresseMormalizer

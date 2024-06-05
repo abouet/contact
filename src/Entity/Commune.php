@@ -1,13 +1,13 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Entity;
+namespace ScoRugby\Contact\Entity;
 
-use ScoRugby\ContactBundle\Repository\CommuneRepository;
+use ScoRugby\Contact\Repository\CommuneRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\CoreBundle\Entity\EntityInterface;
+use ScoRugby\Core\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: CommuneRepository::class, readOnly: true)]
 //[ORM\Table(schema: "club")]

@@ -1,15 +1,15 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Entity;
+namespace ScoRugby\Contact\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use ScoRugby\CoreBundle\Entity\EntityInterface;
+use ScoRugby\Core\Entity\EntityInterface;
+use ScoRugby\Contact\Model\Groupe as BaseGroupe;
 
 #[ORM\Entity(repositoryClass: GroupeRepository::class)]
 //#[ORM\Table(schema: "club")]
-class Groupe implements EntityInterface {
+class Groupe extends BaseGroupe implements EntityInterface {
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -25,57 +25,12 @@ class Groupe implements EntityInterface {
     #[ORM\OneToMany(mappedBy: 'groupe', targetEntity: GroupeContact::class, orphanRemoval: true)]
     private Collection $contacts;
 
-    public function __construct() {
-        $this->contacts = new ArrayCollection();
-    }
-
-    public function getId(): ?int {
-        return $this->id;
-    }
-
-    public function getLibelle(): ?string {
-        return $this->libelle;
-    }
-
-    public function setLibelle(string $libelle): self {
-        $this->libelle = $libelle;
-
-        return $this;
-    }
-
     public function getEmailList(): ?string {
         return $this->emailList;
     }
 
     public function setEmailList(?string $emailList): self {
         $this->emailList = $emailList;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, GroupeContact>
-     */
-    public function getContacts(): Collection {
-        return $this->contacts;
-    }
-
-    public function addContact(GroupeContact $contact): self {
-        if (!$this->contacts->contains($contact)) {
-            $this->contacts->add($contact);
-            $contact->setGroupe($this);
-        }
-
-        return $this;
-    }
-
-    public function removeContact(GroupeContact $contact): self {
-        if ($this->contacts->removeElement($contact)) {
-            // set the owning side to null (unless already changed)
-            if ($contact->getGroupe() === $this) {
-                $contact->setGroupe(null);
-            }
-        }
 
         return $this;
     }

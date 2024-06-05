@@ -1,14 +1,14 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Manager;
+namespace ScoRugby\Contact\Manager;
 
-use ScoRugby\CoreBundle\Manager\AbstractDispatchingManager;
+use ScoRugby\Core\Manager\AbstractDispatchingManager;
 //!!use App\Manager\AdresseManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use ScoRugby\ContactBundle\Repository\ContactRepository;
+use ScoRugby\Contact\Repository\ContactRepository;
 //!!use App\Entity\Adresse;
 use Symfony\Component\String\UnicodeString;
 
@@ -47,28 +47,5 @@ final class ContactManager extends AbstractDispatchingManager {
             $this->getResource()->setCommune($commune);
         }
         $this->getResource()->setAdresse($adresse);
-    }
-
-    /**
-     * Normalisation du nom pour recherche
-     */
-    static public function normalizeNom(string $nom): string {
-        return (string) (new UnicodeString($nom))
-                        ->trim()
-                        ->folded()
-                        ->title(true)
-                        ->replace('De ', 'de ')
-                        ->replace("D'", "d'");
-    }
-
-    /**
-     * Normalisation du prénom pour recherche
-     */
-    static public function normalizePrenom(string $prenom): string {
-        return (string) (new UnicodeString($prenom))
-                        ->trim()
-                        ->folded()
-                        ->title(true)
-                        ->replace(' ', '-');
     }
 }

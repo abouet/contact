@@ -1,11 +1,11 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Manager;
+namespace ScoRugby\Contact\Manager;
 
-use ScoRugby\ContactBundle\Model\Adresse;
-use ScoRugby\ContactBundle\Entity\Commune;
-use ScoRugby\ContactBundle\Repository\CommuneRepository;
-use ScoRugby\ContactBundle\Seriliazer\AdresseMormalizer;
+use ScoRugby\Contact\Model\Adresse;
+use ScoRugby\Contact\Entity\Commune;
+use ScoRugby\Contact\Repository\CommuneRepository;
+use ScoRugby\Contact\Seriliazer\AdresseMormalizer;
 
 /**
  * Description of AdresseManager

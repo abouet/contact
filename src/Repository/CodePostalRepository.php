@@ -1,8 +1,8 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Repository\Adresse;
+namespace ScoRugby\Contact\Repository\Adresse;
 
-use ScoRugby\ContactBundle\Entity\CodePostal;
+use ScoRugby\Contact\Entity\CodePostal;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

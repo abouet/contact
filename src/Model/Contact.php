@@ -1,7 +1,7 @@
 
 <?php
 
-namespace ScoRugby\ContactBundle\Model;
+namespace ScoRugby\Contact\Model;
 
 class Contact implements ContactInterface {
 
@@ -18,11 +18,11 @@ class Contact implements ContactInterface {
         return $this->id;
     }
 
-    public function getAdresse(): Adresse {
+    public function getAdresse(): AdresseInterface {
         return $this->adresse;
     }
 
-    public function setAdresse(Adresse $adresse): self {
+    public function setAdresse(AdresseInterface $adresse): self {
         $this->adresse = $adresse;
         return $this;
     }
@@ -99,5 +99,5 @@ class Contact implements ContactInterface {
 
     public function __toString() {
         return sprintf('%s %s', $this->getPrenom(), $this->getNom());
-    } 
+    }
 }

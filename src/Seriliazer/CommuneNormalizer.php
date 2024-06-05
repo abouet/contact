@@ -1,6 +1,6 @@
 <?php
 
-namespace ScoRugby\ContactBundle\Seriliazer;
+namespace ScoRugby\Contact\Seriliazer;
 
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\String\UnicodeString;
