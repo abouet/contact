@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Core\Controller;
+namespace ScoRugby\Core\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as BaseAbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Core\Manager\ManagerInterface;
+use ScoRugby\Core\Manager\ManagerInterface;
 
 /**
  * Affichage par défaut et CRUD d'une ressource

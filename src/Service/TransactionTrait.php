@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Service;
+namespace ScoRugby\Core\Service;
 
 use Psr\Log\LoggerInterface;
 

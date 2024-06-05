@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Manager;
+namespace ScoRugby\Core\Manager;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -8,11 +8,11 @@ use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-use App\Core\Exception\ResourceNotFoundException;
-use App\Core\Exception\InvalidParameterException;
+use ScoRugby\Core\Exception\ResourceNotFoundException;
+use ScoRugby\Core\Exception\InvalidParameterException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use App\Core\Exception\ResourceActionException;
-use App\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Exception\ResourceActionException;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 
 abstract class AbstractRepositoryManager extends AbstractManager {
 

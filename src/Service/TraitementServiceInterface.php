@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Service;
+namespace ScoRugby\Core\Service;
 
-use App\Core\Model\TraitementInterface;
+use ScoRugby\Core\Model\TraitementInterface;
 
 interface TraitementServiceInterface {
 

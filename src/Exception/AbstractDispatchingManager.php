@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Core\Manager;
+namespace ScoRugby\Core\Manager;
 
-use App\Core\Model\ManagedResourceInterface;
-use App\Core\Event\ResourceEvent;
-use App\Core\Event\ExceptionEvent;
+use ScoRugby\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Event\ResourceEvent;
+use ScoRugby\Core\Event\ExceptionEvent;
 
 /**
  * Description of AbstractService

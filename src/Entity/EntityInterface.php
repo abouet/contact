@@ -1,5 +1,5 @@
 <?php
-namespace App\Core\Entity;
+namespace ScoRugby\Core\Entity;
 
 interface EntityInterface {
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Utility;
+namespace ScoRugby\Core\Utility;
 
 /**
  * Description of CastableObject

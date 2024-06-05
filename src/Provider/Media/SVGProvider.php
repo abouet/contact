@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Provider\Media;
+namespace ScoRugby\Core\Provider\Media;
 
 use Sonata\MediaBundle\Provider\FileProvider as BaseFileProvider;
 use Sonata\AdminBundle\Form\FormMapper;

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Core\Manager;
+namespace ScoRugby\Core\Manager;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-use App\Core\Exception\InvalidResourceException;
-use App\Core\Exception\ResourceActionException;
-use App\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Exception\InvalidResourceException;
+use ScoRugby\Core\Exception\ResourceActionException;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 
 /**
  * Description of AbstractService

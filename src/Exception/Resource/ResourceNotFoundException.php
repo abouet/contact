@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Exception\Resource;
+namespace ScoRugby\Core\Exception\Resource;
 
 class ResourceNotFoundException extends \Exception {
     

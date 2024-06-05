@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Twig;
+namespace ScoRugby\Core\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;

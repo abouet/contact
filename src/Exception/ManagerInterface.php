@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Manager;
+namespace ScoRugby\Core\Manager;
 
-use App\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 
 interface ManagerInterface {
 

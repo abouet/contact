@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Model;
+namespace ScoRugby\Core\Model;
 
 interface ManagedResource {
     

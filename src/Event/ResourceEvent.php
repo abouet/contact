@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Event;
+namespace ScoRugby\Core\Event;
 
-use App\Core\Model\ManagedResourceInterface;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 /**

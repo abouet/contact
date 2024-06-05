@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Repository;
+namespace ScoRugby\Core\Repository;
 
-use App\Core\Entity\SluggifyInterface;
+use ScoRugby\Core\Entity\SluggifyInterface;
 
 /**
  *
