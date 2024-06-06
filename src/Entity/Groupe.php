@@ -2,6 +2,7 @@
 
 namespace ScoRugby\Contact\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ScoRugby\Core\Entity\EntityInterface;
@@ -19,38 +20,30 @@ class Groupe extends BaseGroupe implements EntityInterface {
     #[ORM\Column(length: 20)]
     private ?string $libelle = null;
 
-    #[ORM\Column(length: 100, nullable: true)]
-    private ?string $emailList = null;
-
     #[ORM\OneToMany(mappedBy: 'groupe', targetEntity: GroupeContact::class, orphanRemoval: true)]
     private Collection $contacts;
 
-    public function getEmailList(): ?string {
-        return $this->emailList;
+    public function __construct() {
+        $this->contacts = new ArrayCollection();
     }
 
-    public function setEmailList(?string $emailList): self {
-        $this->emailList = $emailList;
+    /**
+     * @return Collection<int, Contact>
+     */
+    public function getContacts(): Collection {
+        return $this->contacts;
+    }
+
+    public function addContact(Contact $contact): self {
+        if (!$this->contacts->contains($contact)) {
+            $this->contacts->add($contact);
+        }
 
         return $this;
     }
 
-    public function getFonction(): ?Fonction {
-        return $this->fonction;
-    }
-
-    public function setFonction(?Fonction $fonction): static {
-        $this->fonction = $fonction;
-
-        return $this;
-    }
-
-    public function getCalendrier(): ?Calendrier {
-        return $this->calendrier;
-    }
-
-    public function setCalendrier(?Calendrier $calendrier): static {
-        $this->calendrier = $calendrier;
+    public function removeContact(Contact $contact): self {
+        $this->contacts->removeElement($contact);
 
         return $this;
     }
