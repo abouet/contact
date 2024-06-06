@@ -23,28 +23,4 @@ class Groupe extends BaseGroupe implements EntityInterface {
     #[ORM\OneToMany(mappedBy: 'groupe', targetEntity: GroupeContact::class, orphanRemoval: true)]
     private Collection $contacts;
 
-    public function __construct() {
-        $this->contacts = new ArrayCollection();
-    }
-
-    /**
-     * @return Collection<int, Contact>
-     */
-    public function getContacts(): Collection {
-        return $this->contacts;
-    }
-
-    public function addContact(Contact $contact): self {
-        if (!$this->contacts->contains($contact)) {
-            $this->contacts->add($contact);
-        }
-
-        return $this;
-    }
-
-    public function removeContact(Contact $contact): self {
-        $this->contacts->removeElement($contact);
-
-        return $this;
-    }
 }
