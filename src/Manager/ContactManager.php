@@ -9,8 +9,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use ScoRugby\Contact\Repository\ContactRepository;
-//!!use App\Entity\Adresse;
-use Symfony\Component\String\UnicodeString;
+use ScoRugby\Contact\Model\AdresseInterface;
 
 final class ContactManager extends AbstractDispatchingManager {
 
@@ -24,7 +23,7 @@ final class ContactManager extends AbstractDispatchingManager {
     /**
      * Définir Adresse et Commune pour geolocalisation
      */
-    public function setAddress(Adresse $adresse): void {
+    public function setAddress(AdresseInterface $adresse): void {
         $this->adresseManager->normalize($adresse);
         // 
         if (null === $adresse->getVille()) {
