@@ -5,7 +5,7 @@ namespace ScoRugby\Contact\Manager;
 use ScoRugby\Contact\Model\Adresse;
 use ScoRugby\Contact\Entity\Commune;
 use ScoRugby\Contact\Repository\CommuneRepository;
-use ScoRugby\Contact\Seriliazer\AdresseMormalizer;
+use ScoRugby\Contact\Seriliazer\AdresseNormalizer;
 
 /**
  * Description of AdresseManager
