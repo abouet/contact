@@ -2,7 +2,8 @@
 
 namespace ScoRugby\Contact\Entity;
 
-use ScoRugby\Contact\Model as BaseContact;
+use ScoRugby\Contact\Model\Contact as BaseContact;
+use ScoRugby\Contact\Model\Adresse;
 use ScoRugby\Contact\Entity\Commune;
 use ScoRugby\Contact\Entity\Organisation\Organisation;
 use ScoRugby\Contact\Repository\ContactRepository;
@@ -14,7 +15,6 @@ use ScoRugby\Core\Entity\EntityInterface;
 use ScoRugby\Core\Model\ManagedResourceInterface;
 use ScoRugby\Core\Entity\TimestampBlameableInterface;
 use ScoRugby\Core\Entity\TimestampBlameableTrait;
-use ScoRugby\Contact\Model\Adresse;
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 //[ORM\Table(schema: "contact")]
