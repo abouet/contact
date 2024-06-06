@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\Contact\\": "src/"
+            "ScoRugby\\Contact\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Contact\\Tests\\": "tests/"
+            "ScoRugby\\Contact\\Tests\\": "tests/"
         }
     }
 }
