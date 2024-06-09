@@ -22,21 +22,21 @@ class Organisation extends BaseOrganisation implements EntityInterface, Timestam
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\Column(length: 100)]
-    private ?string $nom = null;
+    protected ?string $nom = null;
 
     #[ORM\Embedded(class: Adresse::class, columnPrefix: false)]
-    private Adresse $adresse;
+    protected Adresse $adresse;
 
     #[ORM\Column(length: 1)]
-    private ?string $etat = 'A';
+    protected ?string $etat = 'A';
 
     #[ORM\ManyToMany(targetEntity: Contact::class, mappedBy: 'organisations')]
     //#[ORM\JoinTable(name: 'contact_organisation')]
     //#[ORM\JoinColumn(name: 'organisation_id', unique: true)]
-    private Collection $contacts;
+    protected Collection $contacts;
 
     public function __construct() {
         parent::__construct();

@@ -15,26 +15,26 @@ class ContactTelephone implements EntityInterface {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'telephones')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Contact $contact = null;
+    protected ?Contact $contact = null;
 
     #[ORM\Column(length: 2, options: ['comment' => 'Code pays ISO 3166-1 alpha-2'])]
-    private ?string $code_pays = null;
+    protected ?string $code_pays = null;
 
     #[ORM\Column(length: 20, options: ['comment' => 'sans espace ni autre séparateur'])]
-    private ?string $numero = null;
+    protected ?string $numero = null;
 
     #[ORM\Column(length: 1, options: ['comment' => 'D domicile,P pro,M mobile,A autre+type_libelle'])]
-    private ?string $type = null;
+    protected ?string $type = null;
 
     #[ORM\Column(length: 20, nullable: true)]
-    private ?string $type_libelle = null;
+    protected ?string $type_libelle = null;
 
     #[ORM\Column]
-    private ?bool $prefere = null;
+    protected ?bool $prefere = null;
 
     public function getId(): ?int {
         return $this->id;

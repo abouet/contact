@@ -15,12 +15,12 @@ class Groupe extends BaseGroupe implements EntityInterface {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\Column(length: 20)]
-    private ?string $libelle = null;
+    protected ?string $libelle = null;
 
     #[ORM\OneToMany(mappedBy: 'groupe', targetEntity: GroupeContact::class, orphanRemoval: true)]
-    private Collection $contacts;
+    protected Collection $contacts;
 
 }

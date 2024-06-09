@@ -11,7 +11,7 @@ use ScoRugby\Core\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: CommuneRepository::class, readOnly: true)]
 //[ORM\Table(schema: "club")]
-class Commune implements EntityInterface, \Stringable {
+final class Commune implements EntityInterface, \Stringable {
 
     #[ORM\Id]
     #[ORM\Column(length: 5)]

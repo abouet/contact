@@ -8,7 +8,7 @@ use ScoRugby\Core\Entity\EntityInterface;
 
 #[ORM\Entity(repositoryClass: CodePostalRepository::class, readOnly: true)]
 //[ORM\Table(schema: "club")]
-class CodePostal implements EntityInterface {
+final class CodePostal implements EntityInterface {
 
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]

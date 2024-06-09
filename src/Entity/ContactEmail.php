@@ -13,23 +13,23 @@ class ContactEmail implements EntityInterface {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'emails')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Contact $contact = null;
+    protected ?Contact $contact = null;
 
     #[ORM\Column(length: 100)]
-    private ?string $email = null;
+    protected ?string $email = null;
 
     #[ORM\Column(length: 1, options: ['comment' => 'D domicile,P pro,M mobile,A autre+type_libelle'])]
-    private ?string $type = null;
+    protected ?string $type = null;
 
     #[ORM\Column(length: 20, nullable: true)]
-    private ?string $type_libelle = null;
+    protected ?string $type_libelle = null;
 
     #[ORM\Column]
-    private ?bool $prefere = null;
+    protected ?bool $prefere = null;
 
     public function getId(): ?int {
         return $this->id;

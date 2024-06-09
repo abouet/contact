@@ -14,15 +14,15 @@ class GroupeContact implements EntityInterface {
     #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'contacts')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Groupe $groupe = null;
+    protected ?Groupe $groupe = null;
 
     #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'groupes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Contact $contact = null;
+    protected ?Contact $contact = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $note = null;
+    protected ?string $note = null;
 
     public function getId(): ?int {
         return $this->id;

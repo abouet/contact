@@ -8,9 +8,9 @@ use ScoRugby\Core\Model\GroupeInterface;
 
 class Groupe implements GroupeInterface {
 
-    private ?int $id = null;
-    private ?string $libelle = null;
-    private Collection $contacts;
+    protected ?int $id = null;
+    protected ?string $libelle = null;
+    protected Collection $contacts;
 
     public function __construct() {
         $this->contacts = new ArrayCollection();

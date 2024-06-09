@@ -4,14 +4,14 @@ namespace ScoRugby\Contact\Model;
 
 class Contact implements ContactInterface {
 
-    private ?int $id = null;
-    private Adresse $adresse;
-    private bool $public = false;
-    private bool $listeRouge = true;
-    private ?string $nom = null;
-    private ?string $prenom = null;
-    private ?string $genre = null;
-    private ?string $note = null;
+    protected ?int $id = null;
+    protected Adresse $adresse;
+    protected bool $public = false;
+    protected bool $listeRouge = true;
+    protected ?string $nom = null;
+    protected ?string $prenom = null;
+    protected ?string $genre = null;
+    protected ?string $note = null;
 
     public function getId(): ?int {
         return $this->id;

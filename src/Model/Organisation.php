@@ -4,16 +4,10 @@ namespace ScoRugby\Contact\Model;
 
 class Organisation {
 
-    private ?int $id = null;
-
-    #[ORM\Column(length: 100)]
-    private ?string $nom = null;
-
-    #[ORM\Embedded(class: Adresse::class, columnPrefix: false)]
-    private Adresse $adresse;
-
-    #[ORM\Column(length: 1)]
-    private ?string $etat = 'A';
+    protected ?int $id = null;
+    protected ?string $nom = null;
+    protected Adresse $adresse;
+    protected ?string $etat = 'A';
 
     public function __construct() {
         $this->adresse = new Adresse();

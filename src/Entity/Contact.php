@@ -26,48 +26,48 @@ class Contact extends BaseContact implements EntityInterface, TimestampBlameable
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    protected ?int $id = null;
 
     #[ORM\Embedded(class: Adresse::class, columnPrefix: false)]
-    private Adresse $adresse;
+    protected Adresse $adresse;
 
     #[ORM\Column]
-    private bool $public = false;
+    protected bool $public = false;
 
     #[ORM\Column]
-    private bool $listeRouge = true;
+    protected bool $listeRouge = true;
 
     #[ORM\Column(length: 100)]
-    private ?string $nom = null;
+    protected ?string $nom = null;
 
     #[ORM\Column(length: 100)]
-    private ?string $prenom = null;
+    protected ?string $prenom = null;
 
     #[ORM\Column(length: 1)]
-    private ?string $genre = null;
+    protected ?string $genre = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $note = null;
+    protected ?string $note = null;
 
     //[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    //private ?Media $photo = null;
+    //protected ?Media $photo = null;
 
     #[ORM\ManyToOne]
-    private ?Commune $commune = null;
+    protected ?Commune $commune = null;
 
     #[ORM\OneToMany(mappedBy: 'contact', targetEntity: GroupeContact::class, orphanRemoval: true)]
-    private Collection $groupes;
+    protected Collection $groupes;
 
     #[ORM\ManyToMany(targetEntity: Organisation::class, inversedBy: 'contacts')]
     //#[ORM\JoinTable(name: "contact_organisation")]
     //#[ORM\JoinColumn(unique: true)]
-    private Collection $organisations;
+    protected Collection $organisations;
 
     #[ORM\OneToMany(mappedBy: 'contact', targetEntity: ContactTelephone::class, orphanRemoval: true, cascade: ['all'])]
-    private Collection $telephones;
+    protected Collection $telephones;
 
     #[ORM\OneToMany(mappedBy: 'contact', targetEntity: ContactEmail::class, orphanRemoval: true, cascade: ['all'])]
-    private Collection $emails;
+    protected Collection $emails;
 
     public function __construct() {
         $this->adresse = new Adresse();
