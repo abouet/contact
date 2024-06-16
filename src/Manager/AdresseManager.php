@@ -5,14 +5,13 @@ namespace ScoRugby\Contact\Manager;
 use ScoRugby\Contact\Model\Adresse;
 use ScoRugby\Contact\Entity\Commune;
 use ScoRugby\Contact\Repository\CommuneRepository;
-use ScoRugby\Contact\Seriliazer\AdresseNormalizer;
 
 /**
  * Description of AdresseManager
  *
  * @author Antoine BOUET
  */
-final class AdresseManager {
+class AdresseManager {
 
     public function __construct(private CommuneRepository $repository, private EntityManagerInterface $em) {
         return;

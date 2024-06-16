@@ -3,15 +3,17 @@
 namespace ScoRugby\Contact\Manager;
 
 use ScoRugby\Core\Manager\AbstractDispatchingManager;
-//!!use App\Manager\AdresseManager;
+use ScoRugby\Core\Model\ManagedResourceInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use ScoRugby\Contact\Repository\ContactRepository;
+use ScoRugby\Contact\Model\ContactInterface;
 use ScoRugby\Contact\Model\AdresseInterface;
+use ScoRugby\Contact\Seriliazer\ContactNormalizer;
 
-final class ContactManager extends AbstractDispatchingManager {
+class ContactManager extends AbstractDispatchingManager {
 
     private $adresseManager;
 
@@ -20,10 +22,22 @@ final class ContactManager extends AbstractDispatchingManager {
         $this->adresseManager = new AdresseManager();
     }
 
+    public function setResource(ManagedResourceInterface $resource): self {
+        if (!($resource instanceof ContactInterface)) {
+            throw new \InvalidArgumentException(sprintf("Parameter MUST be an instance of %s. %s given", ContactInterface::class, get_class($resource)));
+        }
+        $normalizer = new ContactNormalizer();
+        $contact = $normalizer->normalize($resource, ContactInterface::class);
+        $adresse = $contact->getAdresse();
+        $this->normalizeAddress($adresse);
+        $contact->setAdresse($adresse);
+        parent::setResource($contact);
+    }
+
     /**
      * Définir Adresse et Commune pour geolocalisation
      */
-    public function setAddress(AdresseInterface $adresse): void {
+    private function normalizeAddress(AdresseInterface $adresse): void {
         $this->adresseManager->normalize($adresse);
         // 
         if (null === $adresse->getVille()) {
@@ -43,8 +57,7 @@ final class ContactManager extends AbstractDispatchingManager {
             }
         }
         if (null !== $commune) {
-            $this->getResource()->setCommune($commune);
+            $adresse->setCommune($commune);
         }
-        $this->getResource()->setAdresse($adresse);
     }
 }
