@@ -5,8 +5,6 @@ namespace ScoRugby\Contact\Repository;
 use ScoRugby\Contact\Entity\Contact;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-//!!use App\Repository\ImportableRepositoryInferface;
-//!!use App\Entity\ImportableInterface;
 
 /**
  * @extends ServiceEntityRepository<Contact>
