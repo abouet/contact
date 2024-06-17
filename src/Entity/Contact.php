@@ -5,7 +5,7 @@ namespace ScoRugby\Contact\Entity;
 use ScoRugby\Contact\Model\Contact as BaseContact;
 use ScoRugby\Contact\Model\Adresse;
 use ScoRugby\Contact\Entity\Commune;
-use ScoRugby\Contact\Entity\Organisation\Organisation;
+use ScoRugby\Contact\Entity\Organisation;
 use ScoRugby\Contact\Repository\ContactRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
